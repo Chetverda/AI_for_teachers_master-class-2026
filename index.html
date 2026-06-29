@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СтажИИровка 2026 — презентации МК</title>
+  <link rel="stylesheet" href="assets/deck.css">
+</head>
+<body>
+
+<div id="screen-home" class="screen active">
+  <div class="home-inner">
+    <div class="tag">СтажИИровка для учителей 2026</div>
+    <h1>Презентации<br>мастер-классов</h1>
+    <p class="subtitle">Выберите МК. Управление: стрелки ← → или пробел. F11 — полный экран. Esc — на главную.</p>
+    <div class="home-grid">
+      <button type="button" class="home-card" data-deck="mk1">
+        <span class="home-tag">МК №1</span>
+        <strong>12:15–14:00 · 6 миссий</strong>
+        <p>Промпты и практика в Нейрошлюзе</p>
+      </button>
+      <button type="button" class="home-card" data-deck="mk2">
+        <span class="home-tag">МК №2</span>
+        <strong>15:00–16:30 · Команды</strong>
+        <p>Создание агента и защита</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="screen-deck" class="screen" hidden>
+  <div class="logo-mark" id="logo-mark">МК №1</div>
+  <button type="button" class="btn-home" id="btn-home" title="На главную">⌂ Главная</button>
+  <div class="deck" id="deck-mk1" data-deck="mk1" hidden>
+<div class="slide">
+    <div class="tag">12:15–14:00 · Практика</div>
+    <h1>Первый день с <em>ИИ-помощником</em></h1>
+    <p class="subtitle">6 коротких миссий в Нейрошлюзе. За полтора часа вы создадите материалы для урока и подготовите основу для своего ИИ-агента.</p>
+  </div>
+
+  <div class="slide">
+    <div class="tag">Перед стартом</div>
+    <h2>Три правила работы</h2>
+    <div class="grid-3">
+      <div class="card accent"><h3>Новый чат</h3><p>Общий демо-аккаунт. Каждая миссия — отдельный чат. Чужие диалоги не открывайте.</p></div>
+      <div class="card accent"><h3>Поднятая рука</h3><p>Если есть вопрос — поднимите руку и позовите ведущего или помощницу.</p></div>
+      <div class="card accent"><h3>Без личных данных</h3><p>Только «Ученик А», «класс 7Б». ФИО и оценки в ИИ не вводим.</p></div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="tag">Безопасность</div>
+    <h2>ИИ — помощник, не замена</h2>
+    <ul class="steps">
+      <li><strong>Проверяйте факты</strong> — даты, цифры, цитаты, статистику</li>
+      <li><strong>Вы — автор</strong> — ИИ составляет черновик, финальное решение за вами</li>
+      <li><strong>Данные учеников не загружаем</strong> — списки класса, оценки, характеристики</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <div class="tag">Теория · 2 минуты</div>
+    <h2>Формула сильного промпта</h2>
+    <div class="formula">Роль + Контекст + Задача + Формат + Ограничения</div>
+    <p class="subtitle">Чем точнее запрос — тем точнее ответ. Не понравилось? Уточните в том же чате: «Сделай короче», «Добавь пример», «Перепиши проще».</p>
+  </div>
+
+  <!-- MISSION 1 -->
+  <div class="slide">
+    <div class="mission-num">01</div>
+    <div class="service-name">ChatGPT · OpenAI</div>
+    <h2>Миссия 1: Сообщение родителям</h2>
+    <p class="subtitle">Напишите текст для чата класса — то, что обычно занимает 20 минут, сейчас займёт 2.</p>
+    <div class="timer">⏱ 14 минут · 8 минут — самостоятельная работа</div>
+  </div>
+
+  <div class="slide">
+    <div class="mission-num">01</div>
+    <div class="prompt-label">Промпт для копирования</div>
+    <div class="prompt-box" id="p1"></div>
+    <div class="tip-box"><strong>Совет:</strong> после черновика напишите в том же чате: «Сделай теплее» или «Добавь дату и время» — не начинайте с нуля.</div>
+    <div class="criteria"><strong>Готово,</strong> когда есть текст, который вы готовы отправить после лёгкой правки.</div>
+  </div>
+
+  <!-- MISSION 2 -->
+  <div class="slide">
+    <div class="mission-num">02</div>
+    <div class="service-name">Nano Banana · Gemini Image</div>
+    <h2>Миссия 2: Иллюстрация к уроку <span class="creative">КРЕАТИВ</span></h2>
+    <p class="subtitle">Создайте картинку для презентации или стенда. Режим: «Текст → изображение».</p>
+    <div class="timer">⏱ 14 минут</div>
+  </div>
+
+  <div class="slide">
+    <div class="mission-num">02</div>
+    <div class="tip-box" style="margin-top:0;margin-bottom:12px"><strong>Лайфхак:</strong> сначала попросите ChatGPT написать промпт для картинки (см. карточку миссии), затем вставьте его в Nano Banana.</div>
+    <div class="prompt-label">Промпт для Nano Banana</div>
+    <div class="prompt-box" id="p2"></div>
+    <div class="criteria"><strong>Готово,</strong> когда на экране — ваша уникальная иллюстрация по теме урока.</div>
+  </div>
+
+  <!-- MISSION 3 -->
+  <div class="slide">
+    <div class="mission-num">03</div>
+    <div class="service-name">DeepSeek R1 · Reasoning</div>
+    <h2>Миссия 3: Три уровня сложности</h2>
+    <p class="subtitle">Одна тема — три варианта задания. Модель «думает вслух» — подождите, это нормально.</p>
+    <div class="timer">⏱ 15 минут</div>
+  </div>
+
+  <div class="slide">
+    <div class="mission-num">03</div>
+    <div class="prompt-label">Промпт для копирования</div>
+    <div class="prompt-box" id="p3"></div>
+    <div class="criteria"><strong>Готово,</strong> когда есть три разных задания по одной теме с критериями оценивания.</div>
+  </div>
+
+  <!-- MISSION 4 -->
+  <div class="slide">
+    <div class="mission-num">04</div>
+    <div class="service-name">Perplexity · Поиск с ИИ</div>
+    <h2>Миссия 4: Актуальный факт для урока</h2>
+    <p class="subtitle">Найдите статистику или новость со ссылкой на источник. Проверьте ссылку — кликните и убедитесь.</p>
+    <div class="timer">⏱ 12 минут</div>
+  </div>
+
+  <div class="slide">
+    <div class="mission-num">04</div>
+    <div class="prompt-label">Промпт для копирования</div>
+    <div class="prompt-box" id="p4"></div>
+    <div class="criteria"><strong>Готово,</strong> когда есть факт + источник + идея, как использовать на уроке.</div>
+  </div>
+
+  <!-- MISSION 5 -->
+  <div class="slide">
+    <div class="mission-num">05</div>
+    <div class="service-name">Аудио и видео в текст · Умный поиск по документам</div>
+    <h2>Миссия 5: Работа с объёмным материалом</h2>
+    <div class="grid-2">
+      <div class="card accent"><h3>Трек А — Аудио и видео в текст</h3><p>Загрузите запись → получите расшифровку → отправьте текст в ChatGPT для анализа.</p></div>
+      <div class="card accent"><h3>Трек Б — Умный поиск по документам</h3><p>Загрузите PDF в папку → задайте вопрос на естественном языке.</p></div>
+    </div>
+    <div class="timer">⏱ 14 минут · выберите один трек</div>
+  </div>
+
+  <div class="slide">
+    <div class="mission-num">05</div>
+    <div class="grid-2" style="margin-top:0">
+      <div>
+        <div class="prompt-label">Трек А — после расшифровки</div>
+        <div class="prompt-box" id="p5a" style="max-height:35vh;font-size:11.5px"></div>
+      </div>
+      <div>
+        <div class="prompt-label">Трек Б — вопросы к документу</div>
+        <div class="prompt-box" id="p5b" style="max-height:35vh;font-size:11.5px"></div>
+      </div>
+    </div>
+    <div class="criteria"><strong>Готово,</strong> когда есть расшифровка с тезисами ИЛИ ответ на вопрос по документу.</div>
+  </div>
+
+  <!-- MISSION 6 -->
+  <div class="slide">
+    <div class="mission-num">06</div>
+    <div class="service-name">Claude Opus · Anthropic</div>
+    <h2>Миссия 6: Крючок урока <span class="creative">КРЕАТИВ</span></h2>
+    <p class="subtitle">Придумайте начало урока, которое удержит внимание учеников с первых 30 секунд.</p>
+    <div class="timer">⏱ 12 минут</div>
+  </div>
+
+  <div class="slide">
+    <div class="mission-num">06</div>
+    <div class="prompt-label">Промпт для копирования</div>
+    <div class="prompt-box" id="p6"></div>
+    <div class="criteria"><strong>Готово,</strong> когда есть минимум один вариант начала урока, который вам самим хочется попробовать.</div>
+  </div>
+
+  <!-- BRIDGE -->
+  <div class="slide">
+    <div class="tag">Мост к МК №2 · 15:00</div>
+    <h2>Мой ИИ-помощник</h2>
+    <p class="subtitle">Заполните розовую карточку на столе. После обеда вы превратите её в настоящего агента в команде.</p>
+    <ul class="steps">
+      <li><strong>Роль</strong> — кем будет ваш агент?</li>
+      <li><strong>Главная задача</strong> — что он делает каждый день?</li>
+      <li><strong>Тон</strong> — строгий, дружелюбный или экспертный?</li>
+      <li><strong>Ограничения</strong> — чего он не делает?</li>
+      <li><strong>Пример запроса</strong> — один реальный вопрос от вас</li>
+    </ul>
+    <div class="timer">⏱ 9 минут</div>
+  </div>
+
+  <!-- REFLECTION -->
+  <div class="slide">
+    <div class="tag">Итоги</div>
+    <h2>Что стало вашей <em style="color:var(--pink);font-style:normal">первой победой</em> сегодня?</h2>
+    <p class="subtitle">Одно предложение. Поднимите руку и поделитесь.</p>
+  </div>
+
+  <div class="slide">
+    <div class="tag">Забираете с собой</div>
+    <h2>5 правил работы с ИИ</h2>
+    <div class="grid-3" style="grid-template-columns:repeat(5,1fr);gap:10px">
+      <div class="card" style="padding:16px;text-align:center"><h3 style="font-size:13px">Роль</h3></div>
+      <div class="card" style="padding:16px;text-align:center"><h3 style="font-size:13px">Формат</h3></div>
+      <div class="card" style="padding:16px;text-align:center"><h3 style="font-size:13px">Ограничения</h3></div>
+      <div class="card" style="padding:16px;text-align:center"><h3 style="font-size:13px">Итерация</h3></div>
+      <div class="card" style="padding:16px;text-align:center"><h3 style="font-size:13px">Проверка</h3></div>
+    </div>
+    <p class="subtitle" style="margin-top:28px">Цифровые бонусы — по QR-коду на экране.<br>МК №2 в 15:00. Карточку «Мой ИИ-помощник» возьмите с собой.</p>
+  </div>
+
+</div>
+  </div>
+  <div class="deck" id="deck-mk2" data-deck="mk2" hidden>
+<div class="slide">
+    <div class="tag">15:00–16:30 · Команды</div>
+    <h1>Команда создаёт <em>ИИ-помощника</em></h1>
+    <p class="subtitle">5 фаз: идея → системный промпт → агент в Нейролабе → тест → питч. Защита в 16:45.</p>
+  </div>
+
+  <div class="slide">
+    <div class="tag">Перед стартом</div>
+    <h2>Три правила</h2>
+    <div class="grid-3">
+      <div class="card accent"><h3>Один агент на команду</h3><p>Не создавайте по агенту на каждого участника.</p></div>
+      <div class="card accent"><h3>Имя агента</h3><p>«Команда [номер] — [название]», чтобы не перепутать в общем аккаунте.</p></div>
+      <div class="card accent"><h3>Без личных данных</h3><p>Только «Ученик А», «класс 7Б» — как на утреннем МК.</p></div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="tag">Команды</div>
+    <h2>8 команд · роли</h2>
+    <div class="grid-2">
+      <div class="card"><h3>Капитан</h3><p>Время, связь с ведущим</p></div>
+      <div class="card"><h3>Методист</h3><p>Системный промпт</p></div>
+      <div class="card"><h3>Тестировщик</h3><p>Проверяет ответы агента</p></div>
+      <div class="card"><h3>Спикер</h3><p>Выступает на защите в 16:45</p></div>
+    </div>
+    <p class="subtitle" style="margin-top:20px">Карточки «Мой ИИ-помощник» с МК №1 — на столе. Лист команды — заполняйте по ходу.</p>
+  </div>
+
+  <div class="slide">
+    <div class="tag">Теория</div>
+    <h2>Чат и агент — в чём разница?</h2>
+    <div class="grid-2">
+      <div class="card"><h3>Обычный чат</h3><p>Каждый раз объясняете задачу заново. Промпт на один запрос.</p></div>
+      <div class="card accent"><h3>ИИ-агент</h3><p>Постоянная роль и правила. Вы кидаете задачу — агент уже знает контекст.</p></div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="tag">Теория</div>
+    <h2>Формула системного промпта</h2>
+    <div class="formula">Роль → Задача → Правила → Формат → Чего НЕ делать</div>
+    <p class="subtitle">Эту структуру вы соберёте во 2-й фазе и вставите в Нейролаб.</p>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">01</div>
+    <h2>Фаза 1: Выбор идеи команды</h2>
+    <p class="subtitle">Объедините карточки «Мой ИИ-помощник». Выберите одну идеу или скомбинируйте лучшее.</p>
+    <ul class="steps">
+      <li>Каждый — 1 минута на свою идею</li>
+      <li>Обсуждение — 5 минут</li>
+      <li>Запись на <strong>листе команды</strong></li>
+    </ul>
+    <div class="timer">⏱ 12 минут</div>
+    <div class="criteria"><strong>Готово:</strong> название, роль, задача, тон, ограничения</div>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">01</div>
+    <h2>Запишите на листе команды</h2>
+    <ul class="steps">
+      <li><strong>Название агента</strong></li>
+      <li><strong>Роль</strong> — кем он является</li>
+      <li><strong>Главная задача</strong> — что делает каждый день</li>
+      <li><strong>Тон</strong> — как общается</li>
+      <li><strong>Ограничения</strong> — чего не делает</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">02</div>
+    <div class="service-name">Claude или ChatGPT</div>
+    <h2>Фаза 2: Системный промпт</h2>
+    <p class="subtitle">Методист копирует промпт с экрана, подставляет данные команды. Вся команда редактирует результат.</p>
+    <div class="timer">⏱ 18 минут</div>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">02</div>
+    <div class="prompt-label">Промпт для генерации инструкции</div>
+    <div class="prompt-box" id="p-gen"></div>
+    <div class="criteria"><strong>Готово:</strong> текст инструкции на листе команды, готов к вставке в Нейролаб</div>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">03</div>
+    <div class="service-name">Нейролаб</div>
+    <h2>Фаза 3: Создание агента</h2>
+    <ul class="steps">
+      <li>Нейролаб → <strong>Создать агента</strong></li>
+      <li>Название: «Команда [N] — [имя]»</li>
+      <li>Модель: <strong>gpt-4o</strong> (универсальные задачи)</li>
+      <li>Вставить <strong>системный промпт</strong></li>
+      <li>База знаний — по желанию (PDF без ФИО)</li>
+      <li><strong>Сохранить</strong></li>
+    </ul>
+    <div class="timer">⏱ 22 минуты</div>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">03</div>
+    <h2>Нейролаб: чек-лист</h2>
+    <div class="grid-2">
+      <div class="card accent"><h3>✓ Название</h3><p>С номером команды</p></div>
+      <div class="card accent"><h3>✓ Инструкция</h3><p>Полный системный промпт</p></div>
+      <div class="card accent"><h3>✓ Модель</h3><p>gpt-4o или gpt-4o-mini</p></div>
+      <div class="card accent"><h3>✓ Сохранено</h3><p>Чат с агентом открывается</p></div>
+    </div>
+    <div class="criteria"><strong>Готово:</strong> агент создан, команда видит чат</div>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">04</div>
+    <h2>Фаза 4: Тестирование</h2>
+    <p class="subtitle">Минимум 3 запроса. Плохой ответ — улучшите инструкцию, не удаляйте агента.</p>
+    <ul class="steps">
+      <li><strong>Простой</strong> — типичная задача из вашей карточки МК №1</li>
+      <li><strong>Средний</strong> — с уточнением класса и предмета</li>
+      <li><strong>Сложный</strong> — нестандартная ситуация</li>
+    </ul>
+    <div class="timer">⏱ 15 минут</div>
+    <div class="criteria"><strong>Готово:</strong> 2+ ответа, которыми команда довольна</div>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">04</div>
+    <div class="prompt-label">Примеры тестовых запросов (адаптируйте)</div>
+    <div class="prompt-box" id="p-test"></div>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">05</div>
+    <h2>Фаза 5: Подготовка питча</h2>
+    <p class="subtitle">Защита в <strong>16:45</strong>. Спикер — 3 минуты.</p>
+    <div class="timer">⏱ 8 минут на подготовку</div>
+  </div>
+
+  <div class="slide">
+    <div class="phase-num">05</div>
+    <div class="prompt-label">Структура питча · 3 минуты</div>
+    <div class="prompt-box" id="p-pitch"></div>
+  </div>
+
+  <div class="slide">
+    <div class="tag">16:45 · Защита</div>
+    <h2>Критерии оценки экспертов</h2>
+    <ul class="steps">
+      <li><strong>Задача</strong> — понятно ли, зачем агент?</li>
+      <li><strong>Промпт</strong> — роль, правила, формат</li>
+      <li><strong>Тест</strong> — живой пример на экране</li>
+      <li><strong>Польза</strong> — можно ли использовать в школе?</li>
+      <li><strong>Питч</strong> — уложились в 3 минуты?</li>
+    </ul>
+    <p class="subtitle" style="margin-top:20px">Порядок выступлений: команды 1 → 8</p>
+  </div>
+
+</div>
+  </div>
+  <div class="progress" id="progress"></div>
+  <div class="slide-counter" id="counter">1 / 1</div>
+  <div class="nav">
+    <button type="button" id="btn-prev" aria-label="Назад">←</button>
+    <button type="button" id="btn-next" aria-label="Вперёд">→</button>
+  </div>
+</div>
+
+<script src="assets/prompts.js"></script>
+<script src="assets/deck.js"></script>
+</body>
+</html>
