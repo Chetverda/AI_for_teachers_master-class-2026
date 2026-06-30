@@ -55,7 +55,11 @@
     });
 
     const deckEl = document.getElementById('deck-' + deckId);
-    slides = deckEl ? Array.from(deckEl.querySelectorAll('.slide')) : [];
+    if (!deckEl) {
+      console.error('Deck not found:', deckId);
+      return;
+    }
+    slides = Array.from(deckEl.querySelectorAll(':scope > .slide'));
     logoMark.textContent = DECK_META[deckId].label;
     history.replaceState(null, '', '#' + deckId);
     showSlide(0);
